@@ -1,0 +1,312 @@
+/*
+=========================
+烟雨 (Yan-yu) - Material MkDocs Theme
+=========================
+配色灵感来自 CherryStudio 烟雨主题：
+传统中国山水墨色，朦胧雨雾中的蓝灰色调，
+捕捉古典山水画的诗意意境
+*/
+
+/* ===== LIGHT MODE ===== */
+[data-md-color-scheme="default"] {
+    /* Main background */
+    --md-default-bg-color: #E8F0F2;         /* Soft blue-white like morning mist */
+    --md-default-bg-color--light: #EDF4F6;  /* Clearing mist */
+    --md-default-bg-color--lighter: #F0F6F8;
+    --md-default-bg-color--dark: #DBE7EB;   /* Medium misty blue */
+
+    /* Text colors */
+    --md-default-fg-color: #2D3E45;             /* Deep blue-gray */
+    --md-default-fg-color--light: #4A5E66;      /* Slightly muted text */
+    --md-default-fg-color--lighter: #7A8E96;    /* Muted secondary text */
+    --md-default-fg-color--lightest: #A0B2B9;   /* Very muted text */
+
+    /* Primary accent */
+    --md-primary-fg-color: #6E99A4;          /* Muted teal - water through mist */
+    --md-primary-fg-color--light: #8DB5BF;
+    --md-primary-fg-color--dark: #5A838E;
+    --md-primary-bg-color: #EFF5F7;
+    --md-primary-bg-color--light: #FFFFFF;
+
+    /* Accent */
+    --md-accent-fg-color: #6E99A4;
+    --md-accent-fg-color--transparent: rgba(110, 153, 164, 0.2);
+    --md-accent-bg-color: #EFF5F7;
+    --md-accent-bg-color--light: #FFFFFF;
+
+    /* Code blocks */
+    --md-code-bg-color: #D1E0E5;             /* Slightly deeper mist */
+    --md-code-fg-color: #2D3E45;
+    --md-code-hl-color: rgba(110, 153, 164, 0.2);
+
+    /* Code highlighting */
+    --md-code-hl-number-color: #5A838E;
+    --md-code-hl-special-color: #6E99A4;
+    --md-code-hl-function-color: #4A7A8A;
+    --md-code-hl-constant-color: #6E99A4;
+    --md-code-hl-keyword-color: #5A838E;
+    --md-code-hl-string-color: #7A9E8E;
+    --md-code-hl-name-color: #2D3E45;
+    --md-code-hl-operator-color: #6E99A4;
+    --md-code-hl-punctuation-color: #6E99A4;
+    --md-code-hl-comment-color: #7A8E96;
+    --md-code-hl-generic-color: #6E99A4;
+    --md-code-hl-variable-color: #4A5E66;
+
+    /* Admonitions / callouts */
+    --md-admonition-bg-color: #EDF4F6;
+    --md-admonition-fg-color: #2D3E45;
+
+    /* Footer */
+    --md-footer-bg-color: #D1E0E5;
+    --md-footer-bg-color--dark: #B7C8CE;
+    --md-footer-fg-color: #2D3E45;
+    --md-footer-fg-color--light: #4A5E66;
+    --md-footer-fg-color--lighter: #7A8E96;
+
+    /* Borders and dividers */
+    --md-typeset-table-color: rgba(45, 62, 69, 0.12);
+    --md-typeset-table-color--light: rgba(45, 62, 69, 0.06);
+    --md-typeset-hr-color: rgba(45, 62, 69, 0.12);
+}
+
+/* ===== DARK MODE ===== */
+[data-md-color-scheme="slate"] {
+    /* Main background */
+    --md-default-bg-color: #283339;              /* Deep blue-gray like distant mountains */
+    --md-default-bg-color--light: #2F3B43;       /* Slightly lighter misty tone */
+    --md-default-bg-color--lighter: #364550;
+    --md-default-bg-color--dark: #1F2930;        /* Deepest shade */
+
+    /* Text colors */
+    --md-default-fg-color: #EFF5F7;              /* Soft white like emerging light */
+    --md-default-fg-color--light: #CDDDE3;
+    --md-default-fg-color--lighter: #8DA3AD;
+    --md-default-fg-color--lightest: #637B86;
+
+    /* Primary accent */
+    --md-primary-fg-color: #6E99A4;              /* Muted teal - water through mist */
+    --md-primary-fg-color--light: #8DB5BF;
+    --md-primary-fg-color--dark: #5A838E;
+    --md-primary-bg-color: #283339;
+    --md-primary-bg-color--light: #364550;
+
+    /* Accent */
+    --md-accent-fg-color: #8DB5BF;
+    --md-accent-fg-color--transparent: rgba(110, 153, 164, 0.3);
+    --md-accent-bg-color: #364550;
+    --md-accent-bg-color--light: #465761;
+
+    /* Code blocks */
+    --md-code-bg-color: #2F3B43;                 /* Slightly lighter misty tone */
+    --md-code-fg-color: #EFF5F7;
+    --md-code-hl-color: rgba(110, 153, 164, 0.2);
+
+    /* Code highlighting */
+    --md-code-hl-number-color: #8DB5BF;
+    --md-code-hl-special-color: #6E99A4;
+    --md-code-hl-function-color: #7AAFC0;
+    --md-code-hl-constant-color: #6E99A4;
+    --md-code-hl-keyword-color: #8DB5BF;
+    --md-code-hl-string-color: #90B8A8;
+    --md-code-hl-name-color: #EFF5F7;
+    --md-code-hl-operator-color: #6E99A4;
+    --md-code-hl-punctuation-color: #6E99A4;
+    --md-code-hl-comment-color: #8DA3AD;
+    --md-code-hl-generic-color: #6E99A4;
+    --md-code-hl-variable-color: #CDDDE3;
+
+    /* Admonitions / callouts */
+    --md-admonition-bg-color: #2F3B43;
+    --md-admonition-fg-color: #EFF5F7;
+
+    /* Footer */
+    --md-footer-bg-color: #1F2930;
+    --md-footer-bg-color--dark: #141C22;
+    --md-footer-fg-color: #EFF5F7;
+    --md-footer-fg-color--light: #CDDDE3;
+    --md-footer-fg-color--lighter: #8DA3AD;
+
+    /* Borders and dividers */
+    --md-typeset-table-color: rgba(239, 245, 247, 0.12);
+    --md-typeset-table-color--light: rgba(239, 245, 247, 0.06);
+    --md-typeset-hr-color: rgba(239, 245, 247, 0.12);
+
+    /* Shadow - softer in dark mode */
+    --md-shadow-z1: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+    --md-shadow-z2: 0 3px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+    --md-shadow-z3: 0 6px 12px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== CUSTOM ELEMENT STYLES ===== */
+
+/* Navigation header */
+[data-md-color-scheme="slate"] .md-header {
+    background-color: #2F3B43 !important;  /* 与深色背景融为一体 */
+    color: #EFF5F7;
+}
+[data-md-color-scheme="default"] .md-header {
+    background-color: #D1E0E5 !important;  /* 浅雾中性色 */
+    color: #2D3E45;
+}
+
+/* Navigation tabs */
+[data-md-color-scheme="slate"] .md-tabs {
+    background-color: #2F3B43;
+}
+[data-md-color-scheme="default"] .md-tabs {
+    background-color: #D1E0E5;
+}
+
+/* Header logo / title text */
+[data-md-color-scheme="default"] .md-header__title {
+    color: #2D3E45;
+}
+[data-md-color-scheme="default"] .md-header__button {
+    color: #2D3E45;
+}
+
+/* Links */
+.md-typeset a {
+    color: #6E99A4;
+    transition: color 0.2s ease;
+}
+.md-typeset a:hover {
+    color: #8DB5BF;
+}
+
+/* Blog post cards on index page */
+.md-post--card {
+    background-color: var(--md-default-bg-color--light);
+    border-radius: 8px;
+    box-shadow: var(--md-shadow-z1);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.md-post--card:hover {
+    box-shadow: var(--md-shadow-z2);
+    transform: translateY(-2px);
+}
+
+/* Code block copy button */
+.md-clipboard {
+    color: rgba(239, 245, 247, 0.6);
+}
+.md-clipboard:hover {
+    color: #6E99A4;
+}
+
+/* Search */
+.md-search-result__meta {
+    background-color: var(--md-default-bg-color--dark);
+}
+.md-search-result__article {
+    border-bottom-color: var(--md-typeset-table-color);
+}
+
+/* Sidebar */
+.md-sidebar__scrollwrap {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(110, 153, 164, 0.3) transparent;
+}
+
+/* Blog navigation previous/next */
+.md-post__action a {
+    color: #6E99A4;
+    border-color: #6E99A4;
+}
+.md-post__action a:hover {
+    background-color: rgba(110, 153, 164, 0.1);
+    color: #8DB5BF;
+}
+
+/* Tags */
+.md-tags__item {
+    background-color: rgba(110, 153, 164, 0.15);
+    color: var(--md-default-fg-color);
+    border-radius: 4px;
+}
+.md-tags__item:hover {
+    background-color: rgba(110, 153, 164, 0.25);
+}
+
+/* ===== 全局对比度修复 - 直接写死颜色，不受CSS变量/opacity影响 ===== */
+
+/*
+ * MkDocs Material 在 .md-typeset 内的文字会叠加 opacity 效果，
+ * 导致 CSS 变量设定的颜色被冲淡。这里用 !important 直接覆盖。
+ */
+
+/* --- 日间模式：所有正文 --- */
+[data-md-color-scheme="default"] .md-typeset h1,
+[data-md-color-scheme="default"] .md-typeset h2,
+[data-md-color-scheme="default"] .md-typeset h3,
+[data-md-color-scheme="default"] .md-typeset h4,
+[data-md-color-scheme="default"] .md-typeset p,
+[data-md-color-scheme="default"] .md-typeset li,
+[data-md-color-scheme="default"] .md-typeset blockquote,
+[data-md-color-scheme="default"] .md-typeset td,
+[data-md-color-scheme="default"] .md-typeset th,
+[data-md-color-scheme="default"] .md-typeset span {
+    color: #1A1A1A !important;
+    opacity: 1 !important;
+}
+
+/* --- 夜间模式：所有正文 --- */
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4,
+[data-md-color-scheme="slate"] .md-typeset p,
+[data-md-color-scheme="slate"] .md-typeset li,
+[data-md-color-scheme="slate"] .md-typeset blockquote,
+[data-md-color-scheme="slate"] .md-typeset td,
+[data-md-color-scheme="slate"] .md-typeset th,
+[data-md-color-scheme="slate"] .md-typeset span {
+    color: #F5F5F5 !important;
+    opacity: 1 !important;
+}
+
+/* --- 日间模式：导航栏 --- */
+[data-md-color-scheme="default"] .md-header__title,
+[data-md-color-scheme="default"] .md-header__button,
+[data-md-color-scheme="default"] .md-tabs__link {
+    color: #1A1A1A !important;
+    opacity: 1 !important;
+}
+
+/* --- 夜间模式：导航栏 --- */
+[data-md-color-scheme="slate"] .md-header__title,
+[data-md-color-scheme="slate"] .md-header__button,
+[data-md-color-scheme="slate"] .md-tabs__link {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
+
+/* Blog post title */
+.md-content__inner h1 {
+    border-bottom: 2px solid rgba(110, 153, 164, 0.3);
+    padding-bottom: 0.4em;
+    font-weight: 700;
+}
+
+/* Links keep the theme accent */
+[data-md-color-scheme="default"] .md-typeset a {
+    color: #4A7A8A !important;
+    opacity: 1 !important;
+}
+[data-md-color-scheme="slate"] .md-typeset a {
+    color: #8DB5BF !important;
+    opacity: 1 !important;
+}
+
+/* Make images have a gentle border in light mode */
+[data-md-color-scheme="default"] .md-typeset img {
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(45, 62, 69, 0.1);
+}
+
+/* Selection color */
+::selection {
+    background-color: rgba(110, 153, 164, 0.3);
+    color: inherit;
+}

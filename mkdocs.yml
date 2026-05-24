@@ -1,0 +1,60 @@
+site_name: BaihowFF 的博客
+site_url: https://baihowff.github.io
+site_description: BaihowFF 的个人技术博客
+site_author: BaihowFF
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: 切换日间模式
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: 切换夜间模式
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/BaihowFF
+      name: BaihowFF on GitHub
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - blog:
+      blog_dir: blog
+      post_date_format: yyyy/MM/dd
+      post_url_format: "{slug}"
+  - tags
+
+copyright: Copyright &copy; 2025 BaihowFF
