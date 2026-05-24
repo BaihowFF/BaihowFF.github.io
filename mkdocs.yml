@@ -52,9 +52,12 @@ markdown_extensions:
 plugins:
   - search
   - blog:
-      blog_dir: blog
+      blog_dir: .
       post_date_format: yyyy/MM/dd
       post_url_format: "{slug}"
   - tags
+
+nav:
+  - 关于: about.md
 
 copyright: Copyright &copy; 2025 BaihowFF
