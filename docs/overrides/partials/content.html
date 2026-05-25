@@ -1,0 +1,23 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% include "partials/tags.html" %}
+{% include "partials/actions.html" %}
+{% if "\u003ch1" not in page.content %}
+  <h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% endif %}
+{{ page.content }}
+{% include "partials/source-file.html" %}
+{% include "partials/feedback.html" %}
+
+<div style="text-align: center; margin-top: 2em; padding-top: 1em; border-top: 1px solid var(--md-default-fg-color--lightest); font-size: 0.8em; color: var(--md-default-fg-color--light);">
+  <span id="busuanzi_container_page_pv">
+    📖 本文阅读量 <span id="busuanzi_value_page_pv">加载中...</span> 次
+  </span>
+  <span style="margin: 0 0.5em;">|</span>
+  <span id="busuanzi_container_site_pv">
+    🌐 全站访问 <span id="busuanzi_value_site_pv">加载中...</span> 次
+  </span>
+</div>
+
+{% include "partials/comments.html" %}

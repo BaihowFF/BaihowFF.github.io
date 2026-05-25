@@ -5,6 +5,7 @@ site_author: BaihowFF
 
 theme:
   name: material
+  custom_dir: docs/overrides
   language: zh
   palette:
     - scheme: slate
@@ -29,6 +30,9 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - https://vercount.one/js
 
 extra:
   social:
