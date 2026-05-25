@@ -2,7 +2,7 @@
 title: AI重构视频工作流
 date: 2026-05-25
 authors:
-  - baihowff
+  - BaihowFF
 tags:
   - AI工作流
   - 智能体

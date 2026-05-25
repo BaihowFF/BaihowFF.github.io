@@ -2,7 +2,7 @@
 title: 我的第一篇博客
 date: 2026-05-23
 authors:
-  - baihowff
+  - BaihowFF
 categories:
   - 随笔
 tags:
