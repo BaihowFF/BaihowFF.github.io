@@ -1,0 +1,61 @@
+{#-
+  Giscus 评论系统 - 仅在博客文章页面显示
+-#}
+{% if page.file.src_uri.startswith('posts/') %}
+  <h2 id="__comments">
+    <span class="twemoji">
+      {% include ".icons/octicons/comment-discussion-24.svg" %}
+    </span>
+    {{ lang.t("meta.comments") }}
+  </h2>
+
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="BaihowFF/BaihowFF.github.io"
+    data-repo-id="R_kgDOSmQSgQ"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOSmQSgc4C9zsN"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <!-- 同步 Giscus 主题与博客主题切换 -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // 初始加载时设置主题
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    // 监听主题切换事件
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+{% endif %}
