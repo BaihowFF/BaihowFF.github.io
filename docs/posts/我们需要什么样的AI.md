@@ -2,7 +2,7 @@
 title: 我们需要什么样的AI
 date: 2026-06-12
 authors:
-  - baihowff
+  - BaihowFF
 tags:
   - AI
   - 思考
