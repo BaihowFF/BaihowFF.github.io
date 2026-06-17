@@ -1,7 +1,35 @@
 {#-
-  Override blog.html to add pagination at both top and bottom
+  Override blog.html to add pagination at both top and bottom,
+  and show recent posts in the left sidebar
 -#}
 {% extends "main.html" %}
+{% block site_nav %}
+  {% if nav %}
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {% include "partials/nav.html" %}
+          {% if posts %}
+          <nav class="md-nav md-nav--primary" style="margin-top: 0.8rem;">
+            <label class="md-nav__title" style="font-size: .7rem; padding-left: 12px; padding-top: 16px; opacity: .7; border-top: 1px solid var(--md-default-fg-color--lightest);">
+              目录
+            </label>
+            <ul class="md-nav__list">
+              {% for post in posts %}
+              <li class="md-nav__item">
+                <a href="{{ post.url | url }}" class="md-nav__link">
+                  {{ post.meta.title or post.title }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
 {% block container %}
   <div class="md-content" data-md-component="content">
     <div class="md-content__inner">
