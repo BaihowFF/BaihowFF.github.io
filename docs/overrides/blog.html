@@ -9,9 +9,7 @@
         {{ page.content }}
       </header>
       {% if pagination %}
-        {% block pagination_top %}
-          {% include "partials/pagination.html" %}
-        {% endblock %}
+        {% include "partials/pagination.html" %}
       {% endif %}
       {% for post in posts %}
         {% include "partials/post.html" %}
