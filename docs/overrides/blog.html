@@ -16,8 +16,9 @@
             </label>
             <ul class="md-nav__list">
               {% for post in posts %}
+              {% set post_slug = post.url | replace('/', '') | replace('.', '') %}
               <li class="md-nav__item">
-                <a href="{{ post.url | url }}" class="md-nav__link">
+                <a href="#post-{{ post_slug }}" class="md-nav__link">
                   {{ post.meta.title or post.title }}
                 </a>
               </li>
@@ -40,6 +41,8 @@
         {% include "partials/pagination.html" %}
       {% endif %}
       {% for post in posts %}
+        {% set post_slug = post.url | replace('/', '') | replace('.', '') %}
+        {% set post_id = "post-" ~ post_slug %}
         {% include "partials/post.html" %}
       {% endfor %}
       {% if pagination %}
