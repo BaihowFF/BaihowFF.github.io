@@ -1,5 +1,7 @@
 name: Deploy MkDocs to GitHub Pages
 
+# 重新触发部署
+
 on:
   push:
     branches:
